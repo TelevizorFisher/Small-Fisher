@@ -5,18 +5,20 @@ $(document).ready(function(){
 		slidesToShow:3,
 		autoplay:true,
 		speed:1000,
-		autoplaySpeed:800,
+		autoplaySpeed:900,
 		responsive:[
 			{
-				breakpoint: 768,
+				breakpoint: 1000,
 				settings: {
-					slidesToShow:2
+					slidesToShow:1,
+					slidesToScroll: 1
 				}
 			},
 			{
-				breakpoint: 550,
+				breakpoint: 768,
 				settings: {
-					slidesToShow:1
+					slidesToShow:1,
+					slidesToScroll: 1
 				}
 			}
 		]
