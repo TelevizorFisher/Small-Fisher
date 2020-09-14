@@ -772,73 +772,6 @@ body.ie .ibg img {
 	top: 18px !important;
 }
 
-.popup {
-	-webkit-overflow-scrolling: touch;
-	background-color: rgba(0, 0, 0, 0.8);
-	display: none;
-	position: fixed !important;
-	top: 0px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	z-index: 100;
-}
-.popup.active .popup-content {
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-.popup.show {
-	display: block;
-}
-.popup.show .popup-content {
-	-ms-transform: scale(1);
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-.popup-table {
-	height: 100%;
-	table-layout: fixed;
-}
-.popup-table > .cell {
-	height: 100%;
-	vertical-align: middle;
-	padding: 30px 10px;
-}
-
-.popup-content {
-	-ms-transform: scale(0);
-	-webkit-transform: scale(0);
-	transform: scale(0);
-	-webkit-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-	position: relative;
-	max-width: 1230px;
-	margin: 0px auto;
-	background-color: #fff;
-}
-
-.popup-close {
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	cursor: pointer;
-	background: url("../img/icons/close.png") 0 0 no-repeat;
-}
-
-.popup-video .popup-close {
-	width: 40px;
-	height: 40px;
-	background-color: #000;
-	top: 0;
-	right: 0;
-}
-
 .icon-menu {
 	display: block;
 	position: absolute;
@@ -1411,7 +1344,7 @@ body.ie .ibg img {
 	width: 10vw;
 	max-width: 500px;
 	margin-right: 15px;
-	background: url("../../img/foto.jpg") center no-repeat;
+	background: url("../img/foto.jpg") center no-repeat;
 	background-size: cover;
 }
 @media (max-width: 767.98px) {
@@ -1648,7 +1581,7 @@ body.ie .ibg img {
 	position: relative;
 	width: 100%;
 	height: 50px;
-	background: url("../../img/portfolio.png") center no-repeat;
+	background: url("../img/portfolio.png") center no-repeat;
 	background-size: contain;
 	margin-bottom: 20px;
 	display: -webkit-box;
@@ -1708,27 +1641,27 @@ body.ie .ibg img {
 	        flex: 1 1 0.333%;
 }
 .portfolio__cart-1 {
-	background: url("../../img/1-www.png") center no-repeat;
+	background: url("../img/1-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__cart-2 {
-	background: url("../../img/2-www.png") center no-repeat;
+	background: url("../img/2-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__cart-3 {
-	background: url("../../img/3-www.png") center no-repeat;
+	background: url("../img/3-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__cart-4 {
-	background: url("../../img/1-www.png") center no-repeat;
+	background: url("../img/1-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__cart-5 {
-	background: url("../../img/2-www.png") center no-repeat;
+	background: url("../img/2-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__cart-6 {
-	background: url("../../img/3-www.png") center no-repeat;
+	background: url("../img/3-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__img {
@@ -2572,12 +2505,12 @@ body.ie .ibg img {
 
 .slider .slick-arrow.slick-prev {
 	left: 0;
-	background: url("../../img/icons/p-left.svg") 0 0/100% no-repeat;
+	background: url("../img/icons/p-left.svg") 0 0/100% no-repeat;
 }
 
 .slider .slick-arrow.slick-next {
 	right: 0;
-	background: url("../../img/icons/p-right.svg") 0 0/100% no-repeat;
+	background: url("../img/icons/p-right.svg") 0 0/100% no-repeat;
 }
 
 .slider .slick-arrow.slick-disabled {
