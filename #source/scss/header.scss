@@ -1,0 +1,232 @@
+//====================================================================================================
+
+//====================================================================================================
+	.icon-menu{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 33;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+	.fon{
+		background-size: cover;
+		background-attachment: fixed;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background-image: url("../img/picture-crop.jpg")  ;
+	}
+	.header {
+		background-color: transparent;
+	&__body {
+		@include flexbox();
+		height: 40px;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width:$md2+px){
+		height: 30px;
+		}
+		@media (max-width:$md3+px){
+		height: 20px;
+		}
+	}
+	&__column {}
+	&__logo {
+		margin: 110px 0px 0px 25px;
+		display: inline-block;
+		width: 200px;
+		z-index: 20;
+			transform: translate(80%, 300%);
+			opacity: 0;
+			transition: all 2s ease 0.5s;
+		img{max-width: 100%;}
+		@media (max-width:$md2+px){
+		width: 180px;
+		margin: 100px 0px 0px 20px;
+		}
+		@media (max-width:$md3+px){
+		width: 80px;
+		margin: 40px 0px 0px 20px;
+		}
+		&._active{
+		transform: translate(0px, 0px);
+		opacity: 1;
+		transition: all 2s ease 1s;
+		}
+	}
+	&__lozung {
+		@include flexbox();
+
+	}
+	&__lozung-ikon {
+		margin: 4px 0px 0px 0px;
+		width: 10.5px;
+		height: 10.5px;
+		background-color: rgb(67, 190, 7);
+		filter: blur(1px);;
+		border: 3px solid green;
+		border-radius: 50%;
+		z-index: 10;
+		font-size: 30px;
+		position: relative;
+	@media (max-width:$md3+px){
+		width: 6px;
+		height: 6px;
+		margin: 3px 0px 0px 0px;
+		}
+	}
+	&__lozung-text {
+		margin: 0px 0px 0px 6px;
+		color: $cyan;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		display: block;
+	@media (max-width:$md3+px){
+		font-size: 10px;
+		}
+	}
+	}
+	.container {
+	}
+	.menu-header {
+		background-color: transparent;
+	&__icon {
+		display: none;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 32;
+		position: relative;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: $cyan;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+		@media (max-width:$md3+px){
+			display: block;
+		}
+	}
+	&__menu {
+		background-color: transparent;
+		@media (max-width:$md3+px){
+			position: fixed;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -110%;
+			z-index: 30;
+			background-color: #000;
+			padding: 30px 10px 20px 10px;
+			overflow: auto;
+			@include anim(0.3s,0s);
+			&.active{
+				left: 0;
+			}
+		}
+	}
+	&__list {
+		@include flexbox();
+		li{margin: 0px 0px 0px 30px;
+			@media (max-width:$md1+px){
+				margin: 0px 0px 0px 15px;
+			}
+			@media (max-width:$md2+px){
+				margin: 0px 0px 0px 10px;
+			}
+			@media (max-width:$md3+px){
+				margin: 0px 0px 10px 0px;
+				&:last-child{margin:0px 0px 0px 0px;}
+			}
+		}
+		@media (max-width:$md3+px){
+			display: inline-block;
+
+		}
+	}
+	&__link {
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		display: block;
+		@include anim(0.3s,0s);
+		position: relative;
+		span{
+		position: relative;
+		display: block;
+		line-height: 28px;
+		margin: 0px 10px 0px 0px;
+	&:after{
+		content:'';
+		position: absolute;
+		left: 50%;
+		width: 0;
+		height: 1px;
+		background-color: $cyan;
+		bottom: 0;
+		@include anim(0.3s,0s);
+	}
+	}
+	&:hover{
+		color: $cyan;
+		span:after{
+		left: 0;
+		width: 100%;
+			}
+		}
+		@media (max-width:$md2+px){
+			font-size: 11px;
+		}
+		@media (max-width:$md3+px){
+			font-size: 30px;
+			margin: 30px 0px 0px 0px;
+		}
+	}
+	&__link--circle {}
+}
+//-----anim----//
+.fadeIn{
+		-webkit-animation-name: fadeIn;
+		-webkit-animation-duration: 1s;
+		animation-iteration-count:infinite;
+		-webkit-animation-timing-function: ease-in-out;
+		visibility: visible !important;
+}
+@-webkit-keyframes fadeIn {
+		0% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+	60%{
+		-webkit-transform: scale(1.1);
+	}
+	80%{
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100%{
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
