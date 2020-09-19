@@ -1696,7 +1696,7 @@ body.ie .ibg img {
 	    flex-wrap: wrap;
 }
 .portfolio__cart {
-	margin: 25px 0px 0px 0px;
+	margin: 25px 10px 0px 10px;
 	position: relative;
 	height: 320px;
 	min-width: 360px;
@@ -1744,6 +1744,11 @@ body.ie .ibg img {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.84);
 }
+@media (max-width: 767.98px) {
+	.portfolio__img {
+		opacity: 1;
+	}
+}
 .portfolio__img:hover {
 	color: #46B6A0;
 	opacity: 1;
@@ -1783,6 +1788,11 @@ body.ie .ibg img {
 	color: #fff;
 	text-align: center;
 	padding-top: 35%;
+}
+@media (max-width: 991.98px) {
+	.portfolio__text {
+		padding-top: 20%;
+	}
 }
 .portfolio__button {
 	position: relative;
