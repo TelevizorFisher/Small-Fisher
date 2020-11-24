@@ -50,7 +50,7 @@ if (location.hash) {
 $('.wrapper').addClass('loaded');
 
 var act = "click";
-if (isMobile.iOS()) {	
+if (isMobile.iOS()) {
 	var act = "touchstart";
 }
 
@@ -65,12 +65,12 @@ if (iconMenu) {
 	});
 }
 let iconLink = document.querySelector(".menu-header__list");
-if (iconLink){
+if (iconLink) {
 	iconLink.addEventListener("click", function () {
 		iconMenu.classList.remove("active");
 		body.classList.remove("lock");
 		menuheader.classList.remove("active");
-	});	
+	});
 }
 //ZOOM
 if ($('.gallery').length > 0) {
@@ -332,3 +332,4 @@ function tip() {
 		$(this).toggleClass('active');
 	});
 }
+

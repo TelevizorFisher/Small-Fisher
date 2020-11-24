@@ -1724,18 +1724,24 @@ body.ie .ibg img {
 	background-size: contain;
 }
 .portfolio__cart-4 {
-	background: url("../img/1-www.png") center no-repeat;
-	background-size: contain;
+	background: url("../img/4-www.png") center no-repeat;
+	background-size: cover;
 }
 .portfolio__cart-5 {
-	background: url("../img/2-www.png") center no-repeat;
-	background-size: contain;
+	background: url("../img/5-www.png") 0 0 no-repeat;
+	background-size: cover;
 }
 .portfolio__cart-6 {
-	background: url("../img/3-www.png") center no-repeat;
+	background: url("../img/6-www.png") center no-repeat;
 	background-size: contain;
 }
 .portfolio__img {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	background: none;
 	width: 100%;
 	height: 100%;
@@ -1783,22 +1789,22 @@ body.ie .ibg img {
 	transition: transform 0.9s, -webkit-transform 0.9s;
 }
 .portfolio__text {
-	position: relative;
+	padding: 20px 5px 0px 5px;
 	font-weight: bold;
 	color: #fff;
+	font-size: 20px;
 	text-align: center;
-	padding-top: 35%;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 400px) {
 	.portfolio__text {
-		padding-top: 20%;
+		font-size: 17px;
 	}
 }
 .portfolio__button {
-	position: relative;
+	position: absolute;
 	z-index: 5;
 	display: inline-block;
-	margin-top: 5px;
+	margin-top: 10px;
 	padding: 4px;
 	font-weight: bold;
 	color: #46B6A0;
@@ -1806,6 +1812,7 @@ body.ie .ibg img {
 	border-radius: 15px;
 	border: 2px solid #46B6A0;
 	cursor: pointer;
+	bottom: 60px;
 }
 .portfolio__button:hover {
 	background: #46B6A0;

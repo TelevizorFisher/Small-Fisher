@@ -100,7 +100,7 @@ body {
 
 		min-height: 100vh;
 		background-color: transparent;
-	justify-content:center;
+		justify-content:center;
 		align-items:center;
 			@media (max-width:$md2+px){
 		min-height: 550px;
@@ -134,15 +134,19 @@ text-align: center;
 		font-size: 18px;
 		line-height: 26px;
 	}
+		@media (max-width:470px){
+		font-size: 14px;
+		line-height: 20px;
+	}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
 	}
 }
-	&__subtitlef {
+	&__subtitl1 {
 		padding: 20px 0px 0px 0px;
 		color: #ffff;
-		font-size: 75px;
+		font-size: 70px;
 		font-weight: 700;
 		line-height: 36px;
 		max-width: 970px;
@@ -158,16 +162,24 @@ text-align: center;
 		font-size: 33px;
 		line-height: 26px;
 	}
+		@media (max-width:470px){
+		font-size: 28px;
+		line-height: 24px;
+	}
+		@media (max-width:410px){
+		font-size: 20px;
+		line-height: 20px;
+	}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
 	transition: all 0.6s ease 0.6s;
 	}
 	}
-	&__subtitles {
+	&__subtitl2 {
 		padding: 30px 0px 0px 0px;
 		color: #ffff;
-		font-size: 75px;
+		font-size: 70px;
 		font-weight: 600;
 		line-height: 36px;
 		max-width: 970px;
@@ -182,6 +194,14 @@ text-align: center;
 		@media (max-width:$md3+px){
 		font-size: 33px;
 		line-height: 26px;
+	}
+		@media (max-width:470px){
+		font-size: 28px;
+		line-height: 24px;
+	}
+		@media (max-width:410px){
+		font-size: 20px;
+		line-height: 20px;
 	}
 	&._active{
 		transform: translate(0px, 0px);
@@ -209,6 +229,19 @@ text-align: center;
 			transform: translate(0px, 120%);
 			opacity: 0;
 			transition: all 0.6s ease 0s;
+		@media (max-width:$md3+px){
+		font-size: 20px;
+		min-width: 210px;
+	}
+		@media (max-width:470px){
+		font-size: 18px;
+		min-width: 190px;
+	}
+		@media (max-width:410px){
+		font-size: 16px;
+		min-width: 170px;
+	}
+
 	&:after{
 		content:'';
 		width: 0;
@@ -277,7 +310,6 @@ text-align: center;
 		background-size: contain;
 	}
 	}
-
 	&__info {
 		flex: 0 0 50%;
 	@media (max-width:$md2+px){
@@ -362,12 +394,16 @@ text-align: center;
 	&__naviki {
 		@include flexbox();
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	&__navik {
 		flex: 1 1 33.333%;
 			transform: translate(120%, 0px);
 			opacity: 0;
 			transition: all 1s ease 1s;
+	@media (max-width:490px){
+		flex: 1 1 100%;
+	}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
@@ -450,6 +486,9 @@ text-align: center;
 		margin: 0px 150px 0px 150px;
 		align-items: center;
 		border-bottom: 2px solid #2c3e50;
+			@media (max-width:635px){
+			margin: 0px 150px 0px 150px;
+			}
 		}
 			&:after{
 		display: block;
@@ -468,12 +507,16 @@ text-align: center;
 		flex-wrap: wrap;
 	}
 	&__cart {
-		margin: 25px 0px 0px 0px;
+		margin: 25px 10px 0px 10px;
 		position: relative;
 		height: 320px;
 		min-width: 360px;
 		text-align: center;
 		flex: 1 1 0.333%;
+			@media (max-width:380px){
+		height: 255px;
+		min-width: 290px;
+			}
 	}
 	&__cart-1 {
 		background: url("../img/1-www.png") center no-repeat;
@@ -488,18 +531,20 @@ text-align: center;
 		background-size: contain;
 	}
 	&__cart-4 {
-		background: url("../img/1-www.png") center no-repeat;
-		background-size: contain;
+		background: url("../img/4-www.png") center no-repeat;
+		background-size: cover;
 	}
 	&__cart-5 {
-		background: url("../img/2-www.png") center no-repeat;
-		background-size: contain;
+		background: url("../img/5-www.png") 0 0 no-repeat;
+		background-size: cover;
 	}
 	&__cart-6 {
-		background: url("../img/3-www.png") center no-repeat;
+		background: url("../img/6-www.png") center no-repeat;
 		background-size: contain;
 	}
 	&__img {
+		display: flex;
+		justify-content: center;
 		background: none;
 		width: 100%;
 		height: 100%;
@@ -507,6 +552,9 @@ text-align: center;
 		padding: 4px;
 		position: absolute;
 		background: rgba(0,0,0,0.84);
+			@media (max-width:$md3+px){
+			opacity: 1;
+			}
 	&:hover {
 		color: #46B6A0;
 		opacity: 1;
@@ -520,7 +568,6 @@ text-align: center;
 		top: 0;
 		left: 0;
 	}
-
 	&::before {
 		border-top: 3px solid #46B6A0;
 		border-bottom: 3px solid #46B6A0;
@@ -538,29 +585,37 @@ text-align: center;
 		}
 	}
 	&__text {
-		position: relative;
+		padding: 20px 5px 0px 5px;
+
 		font-weight: bold;
 		color: #fff;
+		font-size: 20px;
 		text-align: center;
-		padding-top: 35%;
+			@media (max-width:400px){
+				font-size: 17px;
+			}
 	}
+
 	&__button {
-		position: relative;
+
+		position: absolute;
 		z-index: 5;
 		display: inline-block;
-		margin-top: 5px;
+		margin-top: 10px;
 		padding: 4px;
 		font-weight: bold;
 		color: #46B6A0;
 		text-align: center;
 		border-radius: 15px;
 		border: 2px solid #46B6A0;
-
 		cursor: pointer;
+		bottom: 60px;
+
+
 			&:hover{
-		background: #46B6A0;
-		color: #fff;
-				transition: color 0.3s, background 0.3s;
+			background: #46B6A0;
+			color: #fff;
+			transition: color 0.3s, background 0.3s;
 		}
 	}
 }
@@ -598,6 +653,10 @@ text-align: center;
 			transform: translate(120%, 0);
 			opacity: 0;
 			transition: all 0.5s ease 0.5s;
+			@media (max-width:$md2+px){
+			font-size: 28px;
+			line-height: 28px;
+			}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
@@ -624,6 +683,10 @@ text-align: center;
 			transform: translate(0px, 120%);
 			opacity: 0;
 			transition: all 0.7s ease 0.7s;
+	@media (max-width:$md2+px){
+		font-size: 28px;
+		line-height: 28px;
+	}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
@@ -635,6 +698,10 @@ text-align: center;
 			transform: translate(0px, 120%);
 			opacity: 0;
 			transition: all 0.9s ease 0.9s;
+	@media (max-width:$md2+px){
+		font-size: 25px;
+		line-height: 28px;
+	}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
@@ -645,7 +712,6 @@ text-align: center;
 .why-image {
 	text-align: center;
 		flex: 1 1 100%;
-
 }
 //--Footer---//
 .footer {
@@ -653,7 +719,6 @@ text-align: center;
 		background-color: #1d1d1d;
 		text-align: center;
 		color: #fff;
-
 	&__subtitle {
 		display: block;
 		font-size: 20px;
@@ -665,10 +730,10 @@ text-align: center;
 	}
 }
 .image{
-		@media (max-width:$md2+px){
-		justify-content: center;
-		align-items: center;
+		@media (max-width:$md3+px){
+	width: 100%;
 	}
+		object-fit:contain;
 }
 .container {
 		padding: 0 15px;
@@ -688,6 +753,12 @@ text-align: center;
 		@include anim(0.3s,0s);
 		&:hover{
 		color: $cyan;
+		}
+		@media (max-width:$md3+px){
+		font-size: 20px;
+		}
+		@media (max-width:340px){
+		font-size: 18px;
 		}
 	}
 	&__email {
@@ -933,6 +1004,10 @@ $animDuration: 6s;
 			transform: translate(120%, 0);
 			opacity: 0;
 			transition: all 0.9s ease 0.9s;
+			@media (max-width:$md2+px){
+			font-size: 28px;
+			line-height: 28px;
+			}
 	&._active{
 	transform: translate(0px, 0px);
 	opacity: 1;
@@ -941,9 +1016,9 @@ $animDuration: 6s;
 	}
 }
 .slider__body{
-	margin: 15px 0px 15px 0px;
+	margin: 10px 0px 10px 0px;
 	height: 100%;
-	padding: 50px;
+	padding: 30px;
 	display: flex;
 	justify-content:center;
 	align-items: center;
@@ -990,13 +1065,13 @@ $animDuration: 6s;
 /* Конкретный слайдер */
 .slider {
 	position: relative;
-	padding: 0px 60px;
+	padding: 0px 25px;
 
 }
 
 @media (max-width:767px){
 	.slider {
-		padding: 0px 40px;
+		padding: 0px 20px;
 	}
 }
 
@@ -1006,8 +1081,8 @@ $animDuration: 6s;
 	margin: -30px 0px 0px 0px;
 	z-index: 10;
 	font-size: 0;
-	width: 30px;
-	height: 60px;
+	width: 20px;
+	height: 50px;
 
 }
 .slider .slick-arrow.slick-prev{
@@ -1050,6 +1125,9 @@ $animDuration: 6s;
 	padding: 0px 15px;
 	height: 310px;
 	overflow: hidden;
+			@media (max-width:$md3+px){
+			height: 200px;
+			}
 }
 .slider__item img{
 		width: 100%;

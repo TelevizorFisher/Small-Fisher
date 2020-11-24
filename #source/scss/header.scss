@@ -89,6 +89,8 @@
 		}
 	}
 	&__lozung-text {
+		position: relative;
+		text-align: center;
 		margin: 0px 0px 0px 6px;
 		color: $cyan;
 		font-size: 16px;
